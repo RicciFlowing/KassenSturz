@@ -10,6 +10,7 @@ Router.map(function() {
     this.route('target', {
       path: ':target_id'
     });
+    this.route('new');
   });
 });
 
