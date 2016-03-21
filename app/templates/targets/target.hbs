@@ -1,2 +1,19 @@
 <h2> {{model.name}}</h2>
+<p>
+  In {{model.due}} Tagen
+</p>
+
+<p>
+  Ziel: {{model.amount}} €
+</p>
+
+<p>
+  Bisher gesparter Betrag: {{model.balance}} €
+  {{model.percentage}}%
+</p>
+
+<p>
+  Monatlich zugewiesener Betrag: {{model.rate}} €
+</p>
+
 {{outlet}}

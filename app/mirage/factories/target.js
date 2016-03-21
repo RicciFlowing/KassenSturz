@@ -6,10 +6,13 @@
 import Mirage/*, {faker} */ from 'ember-cli-mirage';
 
 export default Mirage.Factory.extend({
-  name: 'Auto',
+  name: function(i) {                  // and functions
+    return 'Ziel ' + i;
+   },
   due: 20,
-  amount: 20000,
-
+  amount: function(i){ return Math.floor((Math.random() * 10) + 1)*100; },
+  balance: 20,
+  rate: 50,
   // tall: true,                           // booleans
 
   // email: function(i) {                  // and functions

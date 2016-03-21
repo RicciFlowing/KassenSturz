@@ -1,9 +1,6 @@
 <ul>
   {{#each model as |target|}}
-    <li>  {{link-to target.name 'targets.target' target}} </li>  
+    <li>  {{link-to target.name 'targets.target' target}} </li>
   {{/each}}
-  <li> A target</li>
-  <li> Another target</li>
-  <li> Yet another target</li>
 </ul>
 {{outlet}}
