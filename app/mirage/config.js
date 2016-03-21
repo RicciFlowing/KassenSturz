@@ -1,12 +1,5 @@
 export default function() {
-  this.get('/targets', function(db, request) {
-    return {
-      users: db.users
-    };
-  });
-
-
-
+  this.get('/targets');
 }
 
   // These comments are here to help you get started. Feel free to delete them.
@@ -81,7 +74,7 @@ export default function() {
     });
 
   */
-}
+
 
 /*
 You can optionally export a config that is only loaded during tests
