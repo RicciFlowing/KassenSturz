@@ -1,6 +1,8 @@
 <ul>
   {{#each model as |budget|}}
-    <li> {{budget.name}}  {{budget.amount}} €</li>
+    <li> {{budget.name}}  {{budget.amount}} €
+       <button {{action 'delete' budget}}> Löschen </button>
+     </li>
   {{/each}}
 </ul>
 {{outlet}}

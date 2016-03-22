@@ -6,6 +6,7 @@ export default function() {
   this.get('/budgets');
   this.get('/budgets/:id');
   this.post('/budgets');
+  this.del('/budgets/:id');
 }
 
   // These comments are here to help you get started. Feel free to delete them.
