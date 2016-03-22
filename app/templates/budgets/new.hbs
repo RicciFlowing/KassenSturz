@@ -1,0 +1,7 @@
+<form {{action 'save' on=submit }}>
+  Name: {{input value=model.name}}
+  betrag: {{input type=number value=model.amount}}
+  <button {{action 'save'}}>Speichern</button>
+</form>
+
+{{outlet}}

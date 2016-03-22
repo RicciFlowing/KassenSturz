@@ -12,7 +12,9 @@ Router.map(function() {
     });
     this.route('new');
   });
-  this.route('budgets');
+  this.route('budgets', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
