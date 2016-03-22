@@ -4,7 +4,7 @@ export default function() {
   this.post('/targets');
 
   this.get('/budgets');
-  this.get('/budgets/:id');
+  this.get('/budgets/:id', ['budget', 'payments']);
   this.post('/budgets');
   this.del('/budgets/:id');
 }
