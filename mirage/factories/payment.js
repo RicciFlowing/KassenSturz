@@ -11,7 +11,6 @@ export default Mirage.Factory.extend({
    },
   amount: function(i){ return Math.floor((Math.random() * 10) + 1)*10; },
   date: faker.date.past,
-  budget_id: 0,
   // tall: true,                           // booleans
 
   // email: function(i) {                  // and functions
