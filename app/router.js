@@ -14,6 +14,9 @@ Router.map(function() {
   });
   this.route('budgets', function() {
     this.route('new');
+    this.route('budget', {
+      path: ':budget_id'
+    });
   });
 });
 
