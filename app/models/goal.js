@@ -7,4 +7,5 @@ export default DS.Model.extend({
   balance: DS.attr('number'),
   rate: DS.attr('number'),
   percentage: Ember.computed('amount', 'balance', function(){return Math.floor(this.get('balance')/this.get('amount')*100);}),
+  payments: DS.hasMany('payments', {async: false})
 });
