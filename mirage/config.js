@@ -1,7 +1,7 @@
 export default function() {
-  this.get('/targets');
-  this.get('/targets/:id');
-  this.post('/targets');
+  this.get('/goals');
+  this.get('/goals/:id');
+  this.post('/goals');
 
   this.get('/budgets');
   this.get('/budgets/:id');

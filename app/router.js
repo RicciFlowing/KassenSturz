@@ -6,9 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('targets', function() {
-    this.route('target', {
-      path: ':target_id'
+  this.route('goals', function() {
+    this.route('goal', {
+      path: ':goal_id'
     });
     this.route('new');
   });
