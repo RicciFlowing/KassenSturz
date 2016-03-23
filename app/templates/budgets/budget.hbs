@@ -1,7 +1,7 @@
 {{model.name}}
 <ul>
   {{#each model.payments as |payment|}}
-    <li> Hello</li>
+    <li> {{payment.name}} {{payment.amount}}€</li>
   {{/each}}
 </ul>
 {{outlet}}
