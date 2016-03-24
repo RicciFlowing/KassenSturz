@@ -1,7 +1,11 @@
-{{model.name}}
+{{budget.name}}
 <ul>
-  {{#each model.payments as |payment|}}
-    <li> {{payment.name}} {{payment.amount}}€</li>
+  <li>
+    {{input value=payment.name}} {{input value=payment.amount}}
+    <button {{action 'addPayment'}} > +</button> 
+  </li>
+  {{#each budget.payments as |pay|}}
+    <li> {{pay.name}} {{pay.amount}}€</li>
   {{/each}}
 </ul>
 {{outlet}}

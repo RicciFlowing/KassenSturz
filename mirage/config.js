@@ -5,6 +5,8 @@ export default function() {
   this.post('/goals');
 
 
+  this.get('/payments');
+  this.post('/payments');
 
   this.get('/budgets');
   this.get('/budgets/:id');
