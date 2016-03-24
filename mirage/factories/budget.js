@@ -10,7 +10,7 @@ export default Mirage.Factory.extend({
     return 'Budget ' + i;
    },
   amount: function(i){ return Math.floor((Math.random() * 10) + 1)*10; },
-  balance: 20
+  //balance: 20
   // tall: true,                           // booleans
 
   // email: function(i) {                  // and functions

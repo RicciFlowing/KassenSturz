@@ -2,10 +2,10 @@
   {{#each model as |budget|}}
     <li> {{#link-to 'budgets.budget' budget}}
       {{budget.name}}
-      {{budget.amount}}€
-      Bereits genutzt: {{budget.balance}} €
-       <button {{action 'delete' budget}}> Löschen </button>
+      Bereits genutzt: {{budget.percentage}}%
+      Noch verfügbar: {{budget.remaining}}€
        {{/link-to}}
+       <button {{action 'delete' budget}}> Löschen </button>
      </li>
   {{/each}}
 </ul>
