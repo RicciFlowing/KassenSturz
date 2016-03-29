@@ -2,14 +2,14 @@
   {{link-to "Verteilen" 'budgets.distribute'}}
 </div>
 
-<ul>
+<ul class="unstyled">
   {{#each model as |budget|}}
     <li> {{#link-to 'budgets.budget' budget}}
       {{budget.name}}
       Bereits genutzt: {{budget.percentage}}%
       Noch verfügbar: {{budget.remaining}}€
        {{/link-to}}
-       <button {{action 'delete' budget}}> Löschen </button>
+       <button {{action 'delete' budget}} class="right"> Löschen </button>
      </li>
   {{/each}}
 </ul>
