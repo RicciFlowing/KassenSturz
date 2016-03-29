@@ -2,5 +2,7 @@
   {{#each model as |goal|}}
     <li>  {{link-to goal.name 'goals.goal' goal}} </li>
   {{/each}}
+  <li> {{link-to '+' 'goals.new'}}</li>
 </ul>
+
 {{outlet}}

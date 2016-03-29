@@ -1,3 +1,5 @@
+{{link-to "Verteilen" 'budgets.distribute'}}
+
 <ul>
   {{#each model as |budget|}}
     <li> {{#link-to 'budgets.budget' budget}}
@@ -13,4 +15,5 @@
 <p>
   Noch zur Verfügung stehend: {{sum}}
 </p>
+
 {{outlet}}

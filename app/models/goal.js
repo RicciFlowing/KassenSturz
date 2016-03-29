@@ -12,9 +12,12 @@ export default DS.Model.extend({
   payments: Ember.computed.alias('budget.payments'),
   balance: Ember.computed('payments.@each.amount', function(){
     let payments = this.get('payments');
-    let amounts = payments.mapBy('amount');
     let sum = 0;
-    amounts.forEach(function(amount){sum+= parseInt(amount);});
+    if(payments.length >0){
+      let amounts = payments.mapBy('amount');
+      amounts.forEach(function(amount){sum+= parseInt(amount);});
+    }
+
     return sum;}),
 
 });
