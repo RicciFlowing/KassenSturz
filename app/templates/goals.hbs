@@ -1,8 +1,12 @@
-<ul>
+<ul class="inline">
   {{#each model as |goal|}}
-    <li>  {{link-to goal.name 'goals.goal' goal}} </li>
+    <li>
+      {{link-to goal.name 'goals.goal' goal}}
+      <br>
+      <progress value={{goal.percentage}} max="100">{{goal.percentage}}</progress>
+     </li>
   {{/each}}
-  <li> {{link-to '+' 'goals.new'}}</li>
+{{link-to '+' 'goals.new'}}
 </ul>
 
 {{outlet}}
