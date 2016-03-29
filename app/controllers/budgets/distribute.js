@@ -8,4 +8,7 @@ export default Ember.Controller.extend({
     amounts.forEach(function(amount){totalAmount+= parseInt(amount)});
     return totalAmount;
     }),
+  remaining: Ember.computed('sum', 'income', function(){
+    return this.get('income')-this.get('sum');
+    }),
 });
