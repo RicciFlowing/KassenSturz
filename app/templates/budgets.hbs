@@ -6,7 +6,7 @@
   {{#each model as |budget|}}
     <li> {{#link-to 'budgets.budget' budget}}
       {{budget.name}}
-      Bereits genutzt: {{budget.percentage}}%
+      <progress value={{budget.percentage}} max="100">{{budget.percentage}}</progress>
       Noch verfügbar: {{budget.remaining}}€
        {{/link-to}}
        <button {{action 'delete' budget}} class="right"> Löschen </button>
