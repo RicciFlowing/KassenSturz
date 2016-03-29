@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -13,7 +14,7 @@ export default DS.Model.extend({
     let payments = this.get('payments');
     let amounts = payments.mapBy('amount');
     let sum = 0;
-    amounts.forEach(function(amount){sum+= parseInt(amount)});
+    amounts.forEach(function(amount){sum+= parseInt(amount);});
     return sum;}),
 
 });
