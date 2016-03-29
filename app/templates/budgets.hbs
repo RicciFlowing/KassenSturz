@@ -1,4 +1,6 @@
-{{link-to "Verteilen" 'budgets.distribute'}}
+<div>
+  {{link-to "Verteilen" 'budgets.distribute'}}
+</div>
 
 <ul>
   {{#each model as |budget|}}
@@ -12,8 +14,5 @@
   {{/each}}
 </ul>
 
-<p>
-  Noch zur Verfügung stehend: {{sum}}
-</p>
 
 {{outlet}}
