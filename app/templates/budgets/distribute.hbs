@@ -1,0 +1,17 @@
+<ul>
+  {{#each budgets as |budget|}}
+    <li>
+      <h3> {{budget.name}}</h3>
+      Budget {{input type="number" value=budget.amount}}
+      <div>
+        Verbleibend {{budget.remaining}}
+      </div>
+      <div>
+      Bisher:  {{budget.balance}}
+      </div>
+    </li>
+  {{/each}}
+</ul>
+Summe = {{sum}}
+
+{{outlet}}

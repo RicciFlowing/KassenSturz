@@ -19,6 +19,7 @@ Router.map(function() {
     }, function() {
       this.route('payments');
     });
+    this.route('distribute');
   });
 });
 
