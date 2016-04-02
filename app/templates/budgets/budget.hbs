@@ -1,29 +1,43 @@
-<h3>{{budget.name}}</h3>
-Zahlungen:
-<table class="Zahlungen">
-  <tr>
-    <td>
-      {{input value=payment.name}}
-    </td>
-    <td>
-      {{input value=payment.amount}}
-    </td>
-    <td>
-      <button {{action 'addPayment'}} > +</button>
-    </td>
-  </tr>
-  {{#each budget.payments as |pay|}}
-  <tr>
-    <td>
-      {{pay.name}}
-    </td>
-    <td>
-      {{pay.amount}}
-    </td>
-    <td>
-      {{pay.date}}
-    </td>
-  </tr>
-  {{/each}}
-</table>
+
+<button {{action 'delete' budget}} class="upper-right"> Löschen </button>
+<div class="center">
+  <h3 class="inline center"> {{budget.name}} </h3>
+  <progress value={{budget.percentage}} max="100">{{budget.percentage}}</progress>
+</div>
+
+
+<section>
+  <table class="payments-listing">
+    <tr>
+      <td>
+        <p>
+          Neue Zahlung
+        </p>
+        {{input value=payment.name placeholder="Empfänger"}}
+      </td>
+      <td>
+        <p>
+          Noch verfügbar: {{budget.remaining}}€
+        </p>
+        {{input type="number" value=payment.amount min="0" placeholder="Betrag"}}
+      </td>
+      <td>
+        <button {{action 'addPayment'}} > +</button>
+      </td>
+    </tr>
+    {{#each budget.payments as |pay|}}
+    <tr>
+      <td>
+        {{pay.name}}
+      </td>
+      <td>
+        {{pay.amount}}
+      </td>
+      <td>
+        {{pay.date}}
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+</section>
 {{outlet}}
