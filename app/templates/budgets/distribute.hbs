@@ -1,18 +1,22 @@
 <ul class="inline">
   {{#each budgets as |budget|}}
-    <li>
+    <li class="budget-distribute">
+      <p class="upper-right remaining">
+        {{budget.remaining}} €
+      </p>
       <h3> {{budget.name}}</h3>
-      Budget {{input type="number" value=budget.amount}}
-      <div>
-        Verbleibend {{budget.remaining}}
-      </div>
-      <div>
-      Bisher:  {{budget.balance}}
-      </div>
+      <progress value={{budget.percentage}} max="100">{{budget.percentage}}</progress>
+      <br>
+      <p class="label">
+        Budget
+      </p>
+      {{input type="number" value=budget.amount}}
     </li>
   {{/each}}
 </ul>
-Summe = {{sum}}
-Einkommen= {{income}}
-Verbleibend = {{remaining}}
+<p class="total-remaining center">
+  Verbleibend {{remaining}}
+</p>
+
+
 {{outlet}}
