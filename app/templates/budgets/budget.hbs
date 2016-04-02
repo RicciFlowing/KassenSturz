@@ -1,11 +1,29 @@
-{{budget.name}}
-<ul>
-  <li>
-    {{input value=payment.name}} {{input value=payment.amount}}
-    <button {{action 'addPayment'}} > +</button> 
-  </li>
+<h3>{{budget.name}}</h3>
+Zahlungen:
+<table class="Zahlungen">
+  <tr>
+    <td>
+      {{input value=payment.name}}
+    </td>
+    <td>
+      {{input value=payment.amount}}
+    </td>
+    <td>
+      <button {{action 'addPayment'}} > +</button>
+    </td>
+  </tr>
   {{#each budget.payments as |pay|}}
-    <li> {{pay.name}} {{pay.amount}}€</li>
+  <tr>
+    <td>
+      {{pay.name}}
+    </td>
+    <td>
+      {{pay.amount}}
+    </td>
+    <td>
+      {{pay.date}}
+    </td>
+  </tr>
   {{/each}}
-</ul>
+</table>
 {{outlet}}

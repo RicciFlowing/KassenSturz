@@ -1,18 +1,1 @@
-<div>
-  {{link-to "Verteilen" 'budgets.distribute'}}
-</div>
-
-<ul class="unstyled">
-  {{#each model as |budget|}}
-    <li> {{#link-to 'budgets.budget' budget}}
-       <h3> {{budget.name}} </h3> 
-      <progress value={{budget.percentage}} max="100">{{budget.percentage}}</progress>
-      Noch verfügbar: {{budget.remaining}}€
-       {{/link-to}}
-       <button {{action 'delete' budget}} class="right"> Löschen </button>
-     </li>
-  {{/each}}
-</ul>
-
-
 {{outlet}}
