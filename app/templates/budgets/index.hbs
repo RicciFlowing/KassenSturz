@@ -1,17 +1,23 @@
-<div>
-  {{link-to "Verteilen" 'budgets.distribute'}}
-</div>
 
-<ul class="unstyled">
+
+
+<ul class="budget-list">
   {{#each model as |budget|}}
-    <li> {{#link-to 'budgets.budget' budget}}
+    <li class="budget-list-item"> {{#link-to 'budgets.budget' budget}}
+      <p class="upper-right remaining">
+        {{budget.remaining}}€
+      </p>
        <h3> {{budget.name}} </h3>
       <progress value={{budget.percentage}} max="100">{{budget.percentage}}</progress>
-      Noch verfügbar: {{budget.remaining}}€
+
        {{/link-to}}
      </li>
   {{/each}}
 </ul>
+<div class="center">
+  {{link-to "Verteilen" 'budgets.distribute' class="distribute-link"}}
+</div>
+
 
 
 {{outlet}}
