@@ -3,7 +3,6 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
-  due: DS.attr('number'),
   amount: DS.attr('number'),
   //Geht in Budget rate: DS.attr('number'),
   percentage: Ember.computed('amount', 'balance', function(){
@@ -24,7 +23,11 @@ export default DS.Model.extend({
       let amounts = payments.mapBy('amount');
       amounts.forEach(function(amount){sum+= parseInt(amount);});
     }
-
     return sum;}),
+  due: Ember.computed('amount', 'balance', 'rate', function(){
+    let remaining = this.get('amount') - this.get('balance');
+    Ember.Logger.log(Math.round(remaining/this.get('rate')));
+    return Math.round(remaining/this.get('rate'));
+  }),
 
 });

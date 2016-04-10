@@ -9,7 +9,6 @@ export default Mirage.Factory.extend({
   name: function(i) {                  // and functions
     return 'Ziel ' + i;
    },
-  due: 20,
   amount: function(i){ return Math.floor((Math.random() * 10) + 1)*100; },
   balance: 20,
   rate: 50,

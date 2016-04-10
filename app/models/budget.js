@@ -17,6 +17,7 @@ export default DS.Model.extend({
     return this.get('amount') - this.get('balance');
     }),
   percentage: Ember.computed('amount', 'balance', function(){
+    if(Ember.isNone(this.get('amount'))){return 0;}
     return Math.floor(this.get('balance')/this.get('amount')*100);
     }),
 });
