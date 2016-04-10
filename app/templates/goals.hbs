@@ -1,15 +1,1 @@
-<ul class="goal-list">
-  {{#each model as |goal|}}
-    <li class="goal-list-item">
-      {{#link-to  'goals.goal' goal}}
-      <h4>{{goal.name}}</h4>
-      <br>
-      <progress value={{goal.percentage}} max="100">{{goal.percentage}}</progress>
-      {{/link-to}}
-    </li>
-  {{/each}}
-</ul>
-{{#link-to 'goals.new'}}
-<span class="plus-sign link-new"> + </span>
-{{/link-to}}
 {{outlet}}
