@@ -1,8 +1,25 @@
-<form {{action 'save' on=submit }}>
-  Name: {{input value=goal.name}}
-  betrag: {{input type=number value=goal.amount}}
-  Rate: {{input type=number value=budget.amount}}
-  <button {{action 'save'}}>Speichern</button>
+<h2 class="center"> Erstelle eine neues Ziel</h2>
+<form {{action 'save' on=submit }} class="goal-form">
+  <div class="input-wrapper">
+    <label for="name"> Name:</label>
+   {{input value=goal.name}}
+  </div>
+  <div class="input-wrapper">
+    <label> Zielbetrag:</label>
+    {{input type="number" value=goal.amount}}
+  </div>
+  <div class="input-wrapper">
+    <label> Rate:</label>
+     {{input type="number" value=budget.amount}}
+  </div>
+  <div class="input-wrapper">
+    Ziel erreicht in {{goal.due}} Monaten
+  </div>
+  <div class="input-wrapper">
+    <button {{action 'save'}}>Speichern</button>
+  </div>
+
+
 </form>
 
 <p>
