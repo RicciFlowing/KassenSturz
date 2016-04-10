@@ -6,7 +6,9 @@
       <progress value={{goal.percentage}} max="100">{{goal.percentage}}</progress>
      </li>
   {{/each}}
-{{link-to '+' 'goals.new'}}
 </ul>
+{{#link-to 'goals.new' class="link-new"}}
+ <span class="plus-sign">+</span>
+{{/link-to}}
 
 {{outlet}}
