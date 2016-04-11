@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   due: Ember.computed('goal.amount', 'budget.amount', function(){
-    Ember.Logger.log(this.get('goal').get('amount'));
     let month = Math.round(parseInt(this.get('goal').get('amount'))/parseInt(this.get('budget').get('amount')));
     return month;
   }),

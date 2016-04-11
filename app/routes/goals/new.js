@@ -8,7 +8,6 @@ export default Ember.Route.extend({
     });
   },
   setupController(controller, model){
-    Ember.Logger.log(model.budget);
     Ember.set(controller, 'goal', model.goal);
     Ember.set(controller, 'budget', model.budget);
   }

@@ -13,7 +13,7 @@
      {{input type="number" value=budget.amount}}
   </div>
   <div class="input-wrapper">
-    Ziel erreicht in {{goal.due}} Monaten
+    Ziel erreicht in {{due}} Monaten
   </div>
   <div class="input-wrapper">
     <button {{action 'save'}}>Speichern</button>
@@ -21,9 +21,5 @@
 
 
 </form>
-
-<p>
-  {{due}}
-</p>
 
 {{outlet}}

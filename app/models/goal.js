@@ -14,7 +14,6 @@ export default DS.Model.extend({
   payments: Ember.computed.alias('budget.payments'),
   balance: Ember.computed('payments.@each.amount', function(){
     if(Ember.isNone(this.get('payments'))){
-      Ember.Logger.log('hello');
       return 0;
     }
     let payments =this.get('payments');
@@ -26,7 +25,6 @@ export default DS.Model.extend({
     return sum;}),
   due: Ember.computed('amount', 'balance', 'rate', function(){
     let remaining = this.get('amount') - this.get('balance');
-    Ember.Logger.log(Math.round(remaining/this.get('rate')));
     return Math.round(remaining/this.get('rate'));
   }),
 
