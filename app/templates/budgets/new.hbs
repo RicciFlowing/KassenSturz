@@ -1,7 +1,19 @@
-<form {{action 'save' on=submit }}>
-  Name: {{input value=model.name}}
-  betrag: {{input type=number value=model.amount}}
-  <button {{action 'save'}}>Speichern</button>
+<h2 class="center"> Erstelle eine neues Budget</h2>
+
+<form {{action 'save' on=submit }} class="goal-form">
+  <div class="input-wrapper">
+    <label for="name">Name</label>
+    {{input value=model.name}}
+  </div>
+
+  <div class="input-wrapper">
+    <label for="name">Monatliches Budget</label>
+    {{input type='number' value=model.amount placeholder=0 min=0}}
+  </div>
+  <div class="input-wrapper">
+    <button {{action 'save'}}>Speichern</button>
+  </div>
+
 </form>
 
 {{outlet}}
