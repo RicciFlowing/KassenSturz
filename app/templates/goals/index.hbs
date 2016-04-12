@@ -2,6 +2,9 @@
   {{#each model as |goal|}}
     <li class="goal-list-item">
       {{#link-to  'goals.goal' goal class="no-margin"}}
+      <p class="upper-right remaining">
+        {{balance-display goal.balance}}
+      </p>
       <h4 class="goal-list-title">{{goal.name}}</h4>
       <progress value={{goal.percentage}} max="100">{{goal.percentage}}</progress>
       {{/link-to}}
