@@ -5,7 +5,7 @@
   {{#each model as |budget|}}
     <li class="budget-list-item"> {{#link-to 'budgets.budget' budget}}
       <p class="upper-right remaining">
-        {{budget.remaining}}€
+        {{balance-display budget.remaining}}
       </p>
        <h3> {{budget.name}} </h3>
       <progress value={{budget.percentage}} max="100">{{budget.percentage}}</progress>
