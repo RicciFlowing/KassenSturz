@@ -1,5 +1,9 @@
 import Ember from 'ember';
 import DS from 'ember-data';
+import duration from 'ember-moment/computeds/duration';
+import humanize from 'ember-moment/computeds/humanize';
+import locale from 'ember-moment/computeds/locale';
+import momentComputed from 'ember-moment/computeds/moment';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
@@ -25,7 +29,7 @@ export default DS.Model.extend({
     return sum;}),
   due: Ember.computed('amount', 'balance', 'rate', function(){
     let remaining = this.get('amount') - this.get('balance');
-    return Math.round(remaining/this.get('rate'));
+    return remaining/this.get('rate');
   }),
 
 });
