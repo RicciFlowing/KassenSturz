@@ -1,23 +1,22 @@
-<h2> {{model.name}}</h2>
+<div class="upper-right bigger"> {{balance-display model.amount}} </div>
+<div class="center">
+  <h2> {{model.name}}  </h2>
+  <progress value={{model.percentage}} max="100">{{model.percentage}}</progress>
 <p>
   Noch {{moment-duration model.due 'month'}}
 </p>
 
 <p>
-  Ziel: {{model.amount}} €
-</p>
-
-<p>
   Bisher gesparter Betrag: {{model.balance}} €
-  <progress value={{model.percentage}} max="100">{{model.percentage}}</progress>
+
 </p>
 
-<p>
-  Monatlich zugewiesener Betrag: {{model.rate}} €
-</p>
 
+</div>
 <div class="center">
-  {{link-to 'Budget' 'budgets.budget' model.budget}}
+  {{#link-to 'budgets.budget' model.budget}}
+  Monatlich zugewiesener Betrag: {{model.rate}} €
+  {{/link-to}}
 </div>
 
 {{outlet}}
