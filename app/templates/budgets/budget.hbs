@@ -19,7 +19,7 @@
         <p>
           Noch verfügbar {{balance-display budget.remaining}}
         </p>
-        {{input type="number" value=payment.amount min="0" placeholder="Betrag"}}
+        {{input type="number" value=payment.amount min="0"  max=budget.remaining placeholder="Betrag"}}
       </td>
       <td>
         <button {{action 'addPayment'}} class="add-payment"> <span class="plus-sign"> + </span></button>

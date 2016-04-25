@@ -9,7 +9,7 @@ export default Mirage.Factory.extend({
   name: function(i) {                  // and functions
     return 'Payment ' + i;
    },
-  amount: function(i){ return Math.floor((Math.random() * 10) + 1); },
+  amount: function(i){ return Math.floor((Math.random() * 5) + 1); },
   date: faker.date.past,
   // tall: true,                           // booleans
 
