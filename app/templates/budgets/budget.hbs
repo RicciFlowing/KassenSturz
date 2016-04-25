@@ -34,7 +34,7 @@
         {{pay.amount}}
       </td>
       <td>
-        {{pay.date}}
+        {{moment-format pay.date 'do MMM YY'}}
       </td>
     </tr>
     {{/each}}
