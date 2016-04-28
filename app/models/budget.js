@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import DS from 'ember-data';
+import moment from 'moment';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
@@ -8,6 +9,9 @@ export default DS.Model.extend({
   payments: DS.hasMany('payments', {async: false}),
   balance: Ember.computed('payments.@each.amount', function(){
     let payments = this.get('payments');
+    // let recentPayments = payments.filter(function(payment, index, array){
+    //   return true; //moment(payment.date).isSame( moment(),'month');
+    // });
     let amounts = payments.mapBy('amount');
     let totalAmount = 0;
     amounts.forEach(function(amount){totalAmount+= parseInt(amount)});
