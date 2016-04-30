@@ -6,7 +6,7 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
       sassOptions: {
         extension: 'sass'
-      }
+      },
   });
 
   // Use `app.import` to add additional libraries to the generated
