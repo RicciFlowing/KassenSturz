@@ -1,5 +1,5 @@
 
-<button {{action 'delete' budget}} class="upper-right"> Löschen </button>
+<button {{action 'delete' budget}} class="upper-right"> {{inline-svg 'cross.svg' class="icon"}} </button>
 <div class="center heading-container">
   <h3 class="inline center"> {{budget.name}} </h3>
   <progress value={{budget.percentage}} max="100" class="budget-progress">{{budget.percentage}}</progress>
